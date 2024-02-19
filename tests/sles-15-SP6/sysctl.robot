@@ -62,7 +62,6 @@ Sysctl_user_max_time_namespaces
 Sysctl_user_max_user_namespaces
     [Documentation]    Depends of the RAM resources bsc#1183339#c11 bsc#1202375#c1
     Sysctl Check Param Int    user.max_user_namespaces    7700:7800
-    [Documentation]    Depends of the RAM resources bsc#1183339#c11
 Sysctl_user_max_uts_namespaces
     [Documentation]    Depends of the RAM resources bsc#1183339#c11 bsc#1202375#c1
     Sysctl Check Param Int    user.max_uts_namespaces    7700:7800
@@ -389,8 +388,6 @@ Sysctl_kernel_max_rcu_stall_to_panic
     Sysctl Check Param Int    kernel.max_rcu_stall_to_panic    0
 Sysctl_kernel_oops_all_cpu_backtrace
     Sysctl Check Param Int    kernel.oops_all_cpu_backtrace    0
-Sysctl_kernel_sched_deadline_period_max_us
-    Sysctl Check Param Int    kernel.sched_deadline_period_max_us    4194304
 Sysctl_kernel_sched_deadline_period_max_us
     Sysctl Check Param Int    kernel.sched_deadline_period_max_us    4194304
 Sysctl_kernel_sched_deadline_period_min_us

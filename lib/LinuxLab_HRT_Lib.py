@@ -279,7 +279,7 @@ class LinuxLab_HRT_Lib:
         chk = tuple(p.split(check_val))
 
         if (len(ret_val) != len(chk)):
-            msg = ("invalid number of values: return values %d, expexted %d" %(len(ret_val), len(chk)))
+            msg = ("invalid number of values: return values %d, expected %d" %(len(ret_val), len(chk)))
             raise AssertionError(msg)
 
         if (self._log):
@@ -336,7 +336,7 @@ class LinuxLab_HRT_Lib:
             print("*INFO:* current value: '%s'" % (response))
 
         if (response != val):
-            msg = ("invalid value '%s', expexted '%s'" %(response, val))
+            msg = ("invalid value '%s', expected '%s'" %(response, val))
             raise AssertionError(msg)
 
     # run 'systemctl show --property <param>'
@@ -369,7 +369,7 @@ class LinuxLab_HRT_Lib:
         chk = tuple(p.split(check_val))
 
         if (len(ret_val) != len(chk)):
-            msg = ("invalid number of values: return values %d, expexted %d" %(len(ret_val), len(chk)))
+            msg = ("invalid number of values: return values %d, expected %d" %(len(ret_val), len(chk)))
             raise AssertionError(msg)
 
         rc = 0
@@ -405,7 +405,7 @@ class LinuxLab_HRT_Lib:
 
         response = self._systemctl_show_get_param(param)
         if (response != val):
-            msg = ("invalid value '%s', expexted '%s'" %(response, val))
+            msg = ("invalid value '%s', expected '%s'" %(response, val))
             raise AssertionError(msg)
 
     # run 'systemctl show --property <param>'
@@ -434,7 +434,7 @@ class LinuxLab_HRT_Lib:
             if (self._verbose):
                 print("match: '%s' >>>%s<<<\n" %(pattern, response))
         else:
-            msg = ("invalid value '%s', expexted regex '%s'" %(response, pattern))
+            msg = ("invalid value '%s', expected regex '%s'" %(response, pattern))
             raise AssertionError(msg)
 
     # run <cmd> <param>'
@@ -485,7 +485,7 @@ class LinuxLab_HRT_Lib:
         chk = tuple(p.split(check_val))
 
         if (len(ret_val) != len(chk)):
-            msg = ("invalid number of values: return values %d, expexted %d" %(len(ret_val), len(chk)))
+            msg = ("invalid number of values: return values %d, expected %d" %(len(ret_val), len(chk)))
             raise AssertionError(msg)
 
         rc = 0
@@ -529,7 +529,7 @@ class LinuxLab_HRT_Lib:
         response = self._run_cmd_skip(l, skip_str)
 
         if (response != val):
-            msg = ("invalid value '%s', expexted '%s'" %(response, val))
+            msg = ("invalid value '%s', expected '%s'" %(response, val))
             raise AssertionError(msg)
 
     def run_cmd_str(self, cmd, val):
@@ -566,7 +566,7 @@ class LinuxLab_HRT_Lib:
         response = self._run_cmd(cmd)
 
         if (response != check_val):
-            msg = ("invalid value '%s', expexted '%s'" %(response, check_val))
+            msg = ("invalid value '%s', expected '%s'" %(response, check_val))
             if (self._verbose):
                 print(msg)
             raise AssertionError(msg)
@@ -587,7 +587,7 @@ class LinuxLab_HRT_Lib:
         response = self._run_cmd(cmd)
 
         if (response != check_val):
-            msg = ("invalid value '%s', expexted '%s'" %(response, check_val))
+            msg = ("invalid value '%s', expected '%s'" %(response, check_val))
             if (self._verbose):
                 print(msg)
             raise AssertionError(msg)
