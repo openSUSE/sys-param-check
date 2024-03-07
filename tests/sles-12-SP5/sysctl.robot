@@ -1516,7 +1516,7 @@ Sysctl_net_ipv6_route_gc_thresh
 Sysctl_net_ipv6_route_gc_timeout
     Sysctl Check Param Int    net.ipv6.route.gc_timeout    60
 Sysctl_net_ipv6_route_max_size
-    Sysctl Check Param Int    net.ipv6.route.max_size    4096
+    Sysctl Check Param Int    net.ipv6.route.max_size    2147483647
 Sysctl_net_ipv6_route_min_adv_mss
     Sysctl Check Param Int    net.ipv6.route.min_adv_mss    1220
 Sysctl_net_ipv6_route_mtu_expires
