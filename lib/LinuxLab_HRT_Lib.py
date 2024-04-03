@@ -339,6 +339,34 @@ class LinuxLab_HRT_Lib:
             msg = ("invalid value '%s', expexted '%s'" %(response, val))
             raise AssertionError(msg)
 
+
+    # run 'sysctl <param>'
+    # and check the output with regex 'regex'
+    # in case of an error raise exception
+    def sysctl_check_param_regex(self, param, regex):
+        """
+        Match a sysctl parameter value with a regex.
+
+        run sysctl <ARG1>
+        match result with regex <ARG2>
+
+        Example:
+        sysctl kernel.osrelease = 5.14.21.*
+
+        """
+        response = self._sysctl_get_param(param)
+
+        if (self._log):
+            print("*INFO:* current value: '%s'" % (response))
+
+        match = re.match(regex, response)
+        if match != None:
+            if (self._verbose):
+                print("match: '%s' >>>%s<<<\n" %(regex, response))
+        else:
+            msg = ("invalid value '%s', expected regex '%s'" %(response, regex))
+            raise AssertionError(msg)
+
     # run 'systemctl show --property <param>'
     # check output for int value and compare with 'val'
     #
@@ -836,6 +864,18 @@ if __name__ == '__main__':
             return False
         return ret
 
+    def check_sysctl_regex(verbose, param, *pattern):
+        o = LinuxLab_HRT_Lib()
+        if verbose:
+            o._set_verbose(True)
+
+        try:
+            o.sysctl_check_param_regex(param, ' '.join(map(str, pattern)))
+        except AssertionError as e:
+            return False
+        return True
+
+
     v = False
     assert True  == check_split_int_range((1, 2), '1:2')
     assert True  == check_split_int_range((None, None), 'invalid')
@@ -857,6 +897,8 @@ if __name__ == '__main__':
     assert True  == check_systemctl_show_int(v, 'DefaultLimitCPU', 18446744073709551615)
     assert True  == check_systemctl_show_str(v, 'DefaultCPUAccounting', 'no')
     assert True  == check_systemctl_show_regex(v, 'Environment', 'LANG=.* PATH=\S+')
+
+    assert True  == check_sysctl_regex(v, 'kernel.osrelease', '5\.14.*')
 
     assert True  == check_sysclt_int(v, 'fs.file-max', fs_file_max)
     assert False == check_sysclt_int(v, 'fs.file-max', fs_file_max + 1)
