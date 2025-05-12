@@ -276,7 +276,7 @@ Sysctl_kernel_pty_reserve
 Sysctl_kernel_random_urandom_min_reseed_secs
     Sysctl Check Param Int    kernel.random.urandom_min_reseed_secs    60
 Sysctl_kernel_random_write_wakeup_threshold
-    Sysctl Check Param Int    kernel.random.write_wakeup_threshold    1024
+    Sysctl Check Param Int    kernel.random.write_wakeup_threshold    896
 Sysctl_kernel_real-root-dev
     Sysctl Check Param Int    kernel.real-root-dev    0
 Sysctl_kernel_sched_cfs_bandwidth_slice_us
