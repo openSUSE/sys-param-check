@@ -37,37 +37,37 @@ Sysctl_net_ipv4_tcp_max_tw_buckets
     [Documentation]    Depends of the RAM resources
     Sysctl Check Param Int    net.ipv4.tcp_max_tw_buckets    8192
 Sysctl_net_ipv4_tcp_mem
-    [Documentation]    Depends of the RAM resources bsc#1183339#c11 bsc#1212403#c11
-    Sysctl Check Param Int    net.ipv4.tcp_mem    21800:23000 29500:31000 44500:46000
+    [Documentation]    Depends of the RAM resources bsc#1183339#c11 bsc#1212403#c11 bsc#1252014#c1
+    Sysctl Check Param Int    net.ipv4.tcp_mem    21800:23000 29300:31000 44000:46000
 Sysctl_net_ipv4_udp_mem
-    [Documentation]    Depends of the RAM resources bsc#1183339#c11 bsc#1202375#c1 bsc#1202375#c4
-    Sysctl Check Param Int    net.ipv4.udp_mem    44000:46000 59000:61000 89000:91000
+    [Documentation]    Depends of the RAM resources bsc#1183339#c11 bsc#1202375#c1 bsc#1202375#c4 bsc#1252014#c1
+    Sysctl Check Param Int    net.ipv4.udp_mem    44000:46000 58000:61000 88000:91000
 Sysctl_user_max_cgroup_namespaces
-    [Documentation]    Depends of the RAM resources bsc#1183339#c11 bsc#1202375#c1
-    Sysctl Check Param Int    user.max_cgroup_namespaces    7700:7800
+    [Documentation]    Depends of the RAM resources bsc#1183339#c11 bsc#1202375#c1 bsc#1252014#c1
+    Sysctl Check Param Int    user.max_cgroup_namespaces    7500:7800
 Sysctl_user_max_ipc_namespaces
-    [Documentation]    Depends of the RAM resources bsc#1183339#c11 bsc#1202375#c1
-    Sysctl Check Param Int    user.max_ipc_namespaces    7700:7800
+    [Documentation]    Depends of the RAM resources bsc#1183339#c11 bsc#1202375#c1 bsc#1252014#c1
+    Sysctl Check Param Int    user.max_ipc_namespaces    7500:7800
 Sysctl_user_max_mnt_namespaces
-    [Documentation]    Depends of the RAM resources bsc#1183339#c11 bsc#1202375#c1
-    Sysctl Check Param Int    user.max_mnt_namespaces    7700:7800
+    [Documentation]    Depends of the RAM resources bsc#1183339#c11 bsc#1202375#c1 bsc#1252014#c1
+    Sysctl Check Param Int    user.max_mnt_namespaces    7500:7800
 Sysctl_user_max_net_namespaces
-    [Documentation]    Depends of the RAM resources bsc#1183339#c11 bsc#1202375#c1
-    Sysctl Check Param Int    user.max_net_namespaces    7700:7800
+    [Documentation]    Depends of the RAM resources bsc#1183339#c11 bsc#1202375#c1 bsc#1252014#c1
+    Sysctl Check Param Int    user.max_net_namespaces    7500:7800
 Sysctl_user_max_pid_namespaces
-    [Documentation]    Depends of the RAM resources bsc#1183339#c11 bsc#1202375#c1
-    Sysctl Check Param Int    user.max_pid_namespaces    7700:7800
+    [Documentation]    Depends of the RAM resources bsc#1183339#c11 bsc#1202375#c1 bsc#1252014#c1
+    Sysctl Check Param Int    user.max_pid_namespaces    7500:7800
 Sysctl_user_max_time_namespaces
-    Sysctl Check Param Int    user.max_time_namespaces    7700:7800
+    Sysctl Check Param Int    user.max_time_namespaces    7500:7800
 Sysctl_user_max_user_namespaces
-    [Documentation]    Depends of the RAM resources bsc#1183339#c11 bsc#1202375#c1
-    Sysctl Check Param Int    user.max_user_namespaces    7700:7800
+    [Documentation]    Depends of the RAM resources bsc#1183339#c11 bsc#1202375#c1 bsc#1252014#c1
+    Sysctl Check Param Int    user.max_user_namespaces    7500:7800
 Sysctl_user_max_uts_namespaces
-    [Documentation]    Depends of the RAM resources bsc#1183339#c11 bsc#1202375#c1
-    Sysctl Check Param Int    user.max_uts_namespaces    7700:7800
+    [Documentation]    Depends of the RAM resources bsc#1183339#c11 bsc#1202375#c1 bsc#1252014#c1
+    Sysctl Check Param Int    user.max_uts_namespaces    7500:7800
 Sysctl_vm_user_reserve_kbytes
-    [Documentation]    Depends of the RAM resources
-    Sysctl Check Param Int    vm.user_reserve_kbytes    61500:63000
+    [Documentation]    Depends of the RAM resources bsc#1252014#c1
+    Sysctl Check Param Int    vm.user_reserve_kbytes    60000:63000
 ### END ###  Depends of the RAM resources
 Sysctl_abi_vsyscall32
     Sysctl Check Param Int    abi.vsyscall32    1
@@ -157,9 +157,9 @@ Sysctl_kernel_acpi_video_flags
 Sysctl_kernel_auto_msgmni
     Sysctl Check Param Int    kernel.auto_msgmni    0
 Sysctl_kernel_bootloader_type
-    Sysctl Check Param Int    kernel.bootloader_type    114
+    Sysctl Check Param Int    kernel.bootloader_type    6
 Sysctl_kernel_bootloader_version
-    Sysctl Check Param Int    kernel.bootloader_version    2
+    Sysctl Check Param Int    kernel.bootloader_version    38
 Sysctl_kernel_bpf_stats_enabled
     Sysctl Check Param Int    kernel.bpf_stats_enabled    0
 Sysctl_kernel_cad_pid
@@ -999,7 +999,7 @@ Sysctl_net_ipv4_tcp_keepalive_time
 Sysctl_net_ipv4_tcp_l3mdev_accept
     Sysctl Check Param Int    net.ipv4.tcp_l3mdev_accept    0
 Sysctl_net_ipv4_tcp_limit_output_bytes
-    Sysctl Check Param Int    net.ipv4.tcp_limit_output_bytes    1048576
+    Sysctl Check Param Int    net.ipv4.tcp_limit_output_bytes    4194304
 Sysctl_net_ipv4_tcp_low_latency
     Sysctl Check Param Int    net.ipv4.tcp_low_latency    0
 Sysctl_net_ipv4_tcp_max_reordering
@@ -1059,7 +1059,7 @@ Sysctl_net_ipv4_tcp_retries2
 Sysctl_net_ipv4_tcp_rfc1337
     Sysctl Check Param Int    net.ipv4.tcp_rfc1337    0
 Sysctl_net_ipv4_tcp_rmem
-    Sysctl Check Param Int    net.ipv4.tcp_rmem    4096 131072 6291456
+    Sysctl Check Param Int    net.ipv4.tcp_rmem    4096 131072 15041664
 Sysctl_net_ipv4_tcp_sack
     Sysctl Check Param Int    net.ipv4.tcp_sack    1
 Sysctl_net_ipv4_tcp_slow_start_after_idle
@@ -1746,22 +1746,6 @@ Sysctl_net_netfilter_nf_conntrack_buckets
     Sysctl Check Param Int    net.netfilter.nf_conntrack_buckets    65536
 Sysctl_net_netfilter_nf_conntrack_checksum
     Sysctl Check Param Int    net.netfilter.nf_conntrack_checksum    1
-Sysctl_net_netfilter_nf_conntrack_dccp_loose
-    Sysctl Check Param Int    net.netfilter.nf_conntrack_dccp_loose    1
-Sysctl_net_netfilter_nf_conntrack_dccp_timeout_closereq
-    Sysctl Check Param Int    net.netfilter.nf_conntrack_dccp_timeout_closereq    64
-Sysctl_net_netfilter_nf_conntrack_dccp_timeout_closing
-    Sysctl Check Param Int    net.netfilter.nf_conntrack_dccp_timeout_closing    64
-Sysctl_net_netfilter_nf_conntrack_dccp_timeout_open
-    Sysctl Check Param Int    net.netfilter.nf_conntrack_dccp_timeout_open    43200
-Sysctl_net_netfilter_nf_conntrack_dccp_timeout_partopen
-    Sysctl Check Param Int    net.netfilter.nf_conntrack_dccp_timeout_partopen    480
-Sysctl_net_netfilter_nf_conntrack_dccp_timeout_request
-    Sysctl Check Param Int    net.netfilter.nf_conntrack_dccp_timeout_request    240
-Sysctl_net_netfilter_nf_conntrack_dccp_timeout_respond
-    Sysctl Check Param Int    net.netfilter.nf_conntrack_dccp_timeout_respond    480
-Sysctl_net_netfilter_nf_conntrack_dccp_timeout_timewait
-    Sysctl Check Param Int    net.netfilter.nf_conntrack_dccp_timeout_timewait    240
 Sysctl_net_netfilter_nf_conntrack_events
     Sysctl Check Param Int    net.netfilter.nf_conntrack_events    2
 Sysctl_net_netfilter_nf_conntrack_expect_max
