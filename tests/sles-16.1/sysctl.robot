@@ -1533,22 +1533,6 @@ Sysctl_net_netfilter_nf_conntrack_buckets
     Sysctl Check Param Int    net.netfilter.nf_conntrack_buckets    65536
 Sysctl_net_netfilter_nf_conntrack_checksum
     Sysctl Check Param Int    net.netfilter.nf_conntrack_checksum    1
-Sysctl_net_netfilter_nf_conntrack_dccp_loose
-    Sysctl Check Param Int    net.netfilter.nf_conntrack_dccp_loose    1
-Sysctl_net_netfilter_nf_conntrack_dccp_timeout_closereq
-    Sysctl Check Param Int    net.netfilter.nf_conntrack_dccp_timeout_closereq    64
-Sysctl_net_netfilter_nf_conntrack_dccp_timeout_closing
-    Sysctl Check Param Int    net.netfilter.nf_conntrack_dccp_timeout_closing    64
-Sysctl_net_netfilter_nf_conntrack_dccp_timeout_open
-    Sysctl Check Param Int    net.netfilter.nf_conntrack_dccp_timeout_open    43200
-Sysctl_net_netfilter_nf_conntrack_dccp_timeout_partopen
-    Sysctl Check Param Int    net.netfilter.nf_conntrack_dccp_timeout_partopen    480
-Sysctl_net_netfilter_nf_conntrack_dccp_timeout_request
-    Sysctl Check Param Int    net.netfilter.nf_conntrack_dccp_timeout_request    240
-Sysctl_net_netfilter_nf_conntrack_dccp_timeout_respond
-    Sysctl Check Param Int    net.netfilter.nf_conntrack_dccp_timeout_respond    480
-Sysctl_net_netfilter_nf_conntrack_dccp_timeout_timewait
-    Sysctl Check Param Int    net.netfilter.nf_conntrack_dccp_timeout_timewait    240
 Sysctl_net_netfilter_nf_conntrack_events
     Sysctl Check Param Int    net.netfilter.nf_conntrack_events    2
 Sysctl_net_netfilter_nf_conntrack_expect_max
