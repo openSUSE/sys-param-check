@@ -98,8 +98,8 @@ Sysctl_fs_inotify_max_queued_events
 Sysctl_fs_inotify_max_user_instances
     Sysctl Check Param Int    fs.inotify.max_user_instances    8192
 Sysctl_fs_inotify_max_user_watches
-    [Documentation]    Depends of the RAM resources bsc#1183339#c11
-    Sysctl Check Param Int    fs.inotify.max_user_watches    15070%0.5
+    [Documentation]    Depends of the RAM resources bsc#1280366#c1
+    Sysctl Check Param Int    fs.inotify.max_user_watches    16732%5
 Sysctl_fs_lease-break-time
     Sysctl Check Param Int    fs.lease-break-time    45
 Sysctl_fs_leases-enable
@@ -133,15 +133,15 @@ Sysctl_fs_protected_regular
 Sysctl_fs_protected_symlinks
     Sysctl Check Param Int    fs.protected_symlinks    1
 Sysctl_fs_quota_allocated_dquots
-    Sysctl Check Param Int    fs.quota.allocated_dquots    0
+    Sysctl Check Param Int    fs.quota.allocated_dquots    2
 Sysctl_fs_quota_cache_hits
-    Sysctl Check Param Int    fs.quota.cache_hits    0
+    Sysctl Check Param Int    fs.quota.cache_hits    48
 Sysctl_fs_quota_drops
-    Sysctl Check Param Int    fs.quota.drops    0
+    Sysctl Check Param Int    fs.quota.drops    32
 Sysctl_fs_quota_free_dquots
     Sysctl Check Param Int    fs.quota.free_dquots    0
 Sysctl_fs_quota_lookups
-    Sysctl Check Param Int    fs.quota.lookups    0
+    Sysctl Check Param Int    fs.quota.lookups    50
 Sysctl_fs_quota_reads
     Sysctl Check Param Int    fs.quota.reads    0
 Sysctl_fs_quota_syncs
@@ -157,9 +157,9 @@ Sysctl_kernel_acpi_video_flags
 Sysctl_kernel_auto_msgmni
     Sysctl Check Param Int    kernel.auto_msgmni    0
 Sysctl_kernel_bootloader_type
-    Sysctl Check Param Int    kernel.bootloader_type    6
+    Sysctl Check Param Int    kernel.bootloader_type    33
 Sysctl_kernel_bootloader_version
-    Sysctl Check Param Int    kernel.bootloader_version    38
+    Sysctl Check Param Int    kernel.bootloader_version    1
 Sysctl_kernel_bpf_stats_enabled
     Sysctl Check Param Int    kernel.bpf_stats_enabled    0
 Sysctl_kernel_cad_pid
@@ -167,7 +167,7 @@ Sysctl_kernel_cad_pid
 Sysctl_kernel_cap_last_cap
     Sysctl Check Param Int    kernel.cap_last_cap    40
 Sysctl_kernel_core_pattern
-    Sysctl Check Param Str    kernel.core_pattern    |/usr/lib/systemd/systemd-coredump %P %u %g %s %t %c %h %d %F
+    Sysctl Check Param Str    kernel.core_pattern    |/usr/lib/systemd/systemd-coredump %P %u %g %s %t %c %h %d %F %I
 Sysctl_kernel_core_pipe_limit
     Sysctl Check Param Int    kernel.core_pipe_limit    16
 Sysctl_kernel_core_uses_pid
@@ -175,7 +175,7 @@ Sysctl_kernel_core_uses_pid
 Sysctl_kernel_ctrl-alt-del
     Sysctl Check Param Int    kernel.ctrl-alt-del    0
 Sysctl_kernel_dmesg_restrict
-    Sysctl Check Param Int    kernel.dmesg_restrict    0
+    Sysctl Check Param Int    kernel.dmesg_restrict    1
 Sysctl_kernel_domainname
     Sysctl Check Param Str    kernel.domainname    (none)
 Sysctl_kernel_firmware_config_force_sysfs_fallback
@@ -281,7 +281,7 @@ Sysctl_kernel_poweroff_cmd
 Sysctl_kernel_print-fatal-signals
     Sysctl Check Param Int    kernel.print-fatal-signals    0
 Sysctl_kernel_printk
-    Sysctl Check Param Int    kernel.printk    7 4 1 7
+    Sysctl Check Param Int    kernel.printk    4 4 1 7
 Sysctl_kernel_printk_delay
     Sysctl Check Param Int    kernel.printk_delay    0
 Sysctl_kernel_printk_devkmsg
@@ -300,8 +300,6 @@ Sysctl_kernel_random_urandom_min_reseed_secs
     Sysctl Check Param Int    kernel.random.urandom_min_reseed_secs    60
 Sysctl_kernel_random_write_wakeup_threshold
     Sysctl Check Param Int    kernel.random.write_wakeup_threshold    256
-Sysctl_kernel_real-root-dev
-    Sysctl Check Param Int    kernel.real-root-dev    0
 Sysctl_kernel_sched_cfs_bandwidth_slice_us
     Sysctl Check Param Int    kernel.sched_cfs_bandwidth_slice_us    5000
 Sysctl_kernel_sched_energy_aware
@@ -313,7 +311,7 @@ Sysctl_kernel_sched_rr_timeslice_ms
 Sysctl_kernel_sched_rt_period_us
     Sysctl Check Param Int    kernel.sched_rt_period_us    1000000
 Sysctl_kernel_sched_rt_runtime_us
-    Sysctl Check Param Int    kernel.sched_rt_runtime_us    950000
+    Sysctl Check Param Int    kernel.sched_rt_runtime_us    1000000
 Sysctl_kernel_sched_schedstats
     Sysctl Check Param Int    kernel.sched_schedstats    0
 Sysctl_kernel_seccomp_actions_avail
@@ -415,7 +413,7 @@ Sysctl_net_core_netdev_budget_usecs
 Sysctl_net_core_netdev_max_backlog
     Sysctl Check Param Int    net.core.netdev_max_backlog    1000
 Sysctl_net_core_netdev_rss_key
-    Sysctl Check Param Str    net.core.netdev_rss_key    00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+    Sysctl Check Param Str    net.core.netdev_rss_key    00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
 Sysctl_net_core_netdev_tstamp_prequeue
     Sysctl Check Param Int    net.core.netdev_tstamp_prequeue    1
 Sysctl_net_core_netdev_unregister_timeout_secs
@@ -425,11 +423,11 @@ Sysctl_net_core_optmem_max
 Sysctl_net_core_rmem_default
     Sysctl Check Param Int    net.core.rmem_default    212992
 Sysctl_net_core_rmem_max
-    Sysctl Check Param Int    net.core.rmem_max    212992
+    Sysctl Check Param Int    net.core.rmem_max    4194304
 Sysctl_net_core_rps_sock_flow_entries
     Sysctl Check Param Int    net.core.rps_sock_flow_entries    0
 Sysctl_net_core_skb_defer_max
-    Sysctl Check Param Int    net.core.skb_defer_max    64
+    Sysctl Check Param Int    net.core.skb_defer_max    128
 Sysctl_net_core_somaxconn
     Sysctl Check Param Int    net.core.somaxconn    4096
 Sysctl_net_core_tstamp_allow_data
@@ -441,7 +439,7 @@ Sysctl_net_core_warnings
 Sysctl_net_core_wmem_default
     Sysctl Check Param Int    net.core.wmem_default    212992
 Sysctl_net_core_wmem_max
-    Sysctl Check Param Int    net.core.wmem_max    212992
+    Sysctl Check Param Int    net.core.wmem_max    4194304
 Sysctl_net_core_xfrm_acq_expires
     Sysctl Check Param Int    net.core.xfrm_acq_expires    30
 Sysctl_net_core_xfrm_aevent_etime
@@ -745,9 +743,9 @@ Sysctl_net_ipv4_icmp_errors_use_inbound_ifaddr
 Sysctl_net_ipv4_icmp_ignore_bogus_error_responses
     Sysctl Check Param Int    net.ipv4.icmp_ignore_bogus_error_responses    1
 Sysctl_net_ipv4_icmp_msgs_burst
-    Sysctl Check Param Int    net.ipv4.icmp_msgs_burst    50
+    Sysctl Check Param Int    net.ipv4.icmp_msgs_burst    10000
 Sysctl_net_ipv4_icmp_msgs_per_sec
-    Sysctl Check Param Int    net.ipv4.icmp_msgs_per_sec    1000
+    Sysctl Check Param Int    net.ipv4.icmp_msgs_per_sec    10000
 Sysctl_net_ipv4_icmp_ratelimit
     Sysctl Check Param Int    net.ipv4.icmp_ratelimit    1000
 Sysctl_net_ipv4_icmp_ratemask
@@ -959,7 +957,7 @@ Sysctl_net_ipv4_tcp_comp_sack_delay_ns
 Sysctl_net_ipv4_tcp_comp_sack_nr
     Sysctl Check Param Int    net.ipv4.tcp_comp_sack_nr    44
 Sysctl_net_ipv4_tcp_comp_sack_slack_ns
-    Sysctl Check Param Int    net.ipv4.tcp_comp_sack_slack_ns    100000
+    Sysctl Check Param Int    net.ipv4.tcp_comp_sack_slack_ns    10000
 Sysctl_net_ipv4_tcp_congestion_control
     Sysctl Check Param Str    net.ipv4.tcp_congestion_control    cubic
 Sysctl_net_ipv4_tcp_dsack
@@ -1059,7 +1057,7 @@ Sysctl_net_ipv4_tcp_retries2
 Sysctl_net_ipv4_tcp_rfc1337
     Sysctl Check Param Int    net.ipv4.tcp_rfc1337    0
 Sysctl_net_ipv4_tcp_rmem
-    Sysctl Check Param Int    net.ipv4.tcp_rmem    4096 131072 15041664
+    Sysctl Check Param Int    net.ipv4.tcp_rmem    4096 131072 15146880
 Sysctl_net_ipv4_tcp_sack
     Sysctl Check Param Int    net.ipv4.tcp_sack    1
 Sysctl_net_ipv4_tcp_slow_start_after_idle
@@ -1217,7 +1215,7 @@ Sysctl_net_ipv6_conf_all_suppress_frag_ndisc
 Sysctl_net_ipv6_conf_all_temp_prefered_lft
     Sysctl Check Param Int    net.ipv6.conf.all.temp_prefered_lft    86400
 Sysctl_net_ipv6_conf_all_temp_valid_lft
-    Sysctl Check Param Int    net.ipv6.conf.all.temp_valid_lft    604800
+    Sysctl Check Param Int    net.ipv6.conf.all.temp_valid_lft    172800
 Sysctl_net_ipv6_conf_all_use_oif_addrs_only
     Sysctl Check Param Int    net.ipv6.conf.all.use_oif_addrs_only    0
 Sysctl_net_ipv6_conf_all_use_tempaddr
@@ -1327,7 +1325,7 @@ Sysctl_net_ipv6_conf_default_suppress_frag_ndisc
 Sysctl_net_ipv6_conf_default_temp_prefered_lft
     Sysctl Check Param Int    net.ipv6.conf.default.temp_prefered_lft    86400
 Sysctl_net_ipv6_conf_default_temp_valid_lft
-    Sysctl Check Param Int    net.ipv6.conf.default.temp_valid_lft    604800
+    Sysctl Check Param Int    net.ipv6.conf.default.temp_valid_lft    172800
 Sysctl_net_ipv6_conf_default_use_oif_addrs_only
     Sysctl Check Param Int    net.ipv6.conf.default.use_oif_addrs_only    0
 Sysctl_net_ipv6_conf_default_use_tempaddr
@@ -1437,7 +1435,7 @@ Sysctl_net_ipv6_conf_ens4_suppress_frag_ndisc
 Sysctl_net_ipv6_conf_ens4_temp_prefered_lft
     Sysctl Check Param Int    net.ipv6.conf.ens4.temp_prefered_lft    86400
 Sysctl_net_ipv6_conf_ens4_temp_valid_lft
-    Sysctl Check Param Int    net.ipv6.conf.ens4.temp_valid_lft    604800
+    Sysctl Check Param Int    net.ipv6.conf.ens4.temp_valid_lft    172800
 Sysctl_net_ipv6_conf_ens4_use_oif_addrs_only
     Sysctl Check Param Int    net.ipv6.conf.ens4.use_oif_addrs_only    0
 Sysctl_net_ipv6_conf_ens4_use_tempaddr
@@ -1547,7 +1545,7 @@ Sysctl_net_ipv6_conf_lo_suppress_frag_ndisc
 Sysctl_net_ipv6_conf_lo_temp_prefered_lft
     Sysctl Check Param Int    net.ipv6.conf.lo.temp_prefered_lft    86400
 Sysctl_net_ipv6_conf_lo_temp_valid_lft
-    Sysctl Check Param Int    net.ipv6.conf.lo.temp_valid_lft    604800
+    Sysctl Check Param Int    net.ipv6.conf.lo.temp_valid_lft    172800
 Sysctl_net_ipv6_conf_lo_use_oif_addrs_only
     Sysctl Check Param Int    net.ipv6.conf.lo.use_oif_addrs_only    0
 Sysctl_net_ipv6_conf_lo_use_tempaddr
@@ -1573,7 +1571,7 @@ Sysctl_net_ipv6_icmp_echo_ignore_anycast
 Sysctl_net_ipv6_icmp_echo_ignore_multicast
     Sysctl Check Param Int    net.ipv6.icmp.echo_ignore_multicast    0
 Sysctl_net_ipv6_icmp_ratelimit
-    Sysctl Check Param Int    net.ipv6.icmp.ratelimit    1000
+    Sysctl Check Param Int    net.ipv6.icmp.ratelimit    100
 Sysctl_net_ipv6_icmp_ratemask
     Sysctl Check Param Str    net.ipv6.icmp.ratemask    0-1,3-127
 Sysctl_net_ipv6_idgen_delay
